@@ -14,12 +14,20 @@ namespace ScrollView
 	{
 		[Outlet]
 		AppKit.NSButton Btn { get; set; }
+
+		[Outlet]
+		AppKit.NSScrollView Scroll { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (Btn != null) {
 				Btn.Dispose ();
 				Btn = null;
+			}
+
+			if (Scroll != null) {
+				Scroll.Dispose ();
+				Scroll = null;
 			}
 		}
 	}
